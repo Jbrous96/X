@@ -1,26 +1,50 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <nav-bar v-if="!isRoleSelectPage" />
+    
+    <router-view></router-view>
+    <app-footer v-if="!isRoleSelectPage" />  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import NavBar from '@/components/NavBar.vue';
+import AppFooter from '@/components/AppFooter.vue';
+import ContactView from '@/views/ContactView.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NavBar,
+    AppFooter
+  },
+  /**
+   * Composable that determines if the current route is the role select page
+   * and returns a boolean indicating if the current route is the role select page.
+   * @returns {View} An object containing the isRoleSelectPage property.
+   */
+  setup() {
+    const route = useRoute();
+    const isRoleSelectPage = computed(() => route.path === '/');
+
+    return {
+      isRoleSelectPage
+    };
   }
-}
+};
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 </style>
