@@ -74,3 +74,6 @@
     "not ie 11"
   ]
 }
+"engines": {
+  "node": "18.x"
+}
