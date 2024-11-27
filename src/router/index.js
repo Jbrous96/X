@@ -7,6 +7,7 @@ import ConnectView from '../views/ConnectView.vue';
 import ContactView from '../views/ContactView.vue';
 import GrowView from '../views/GrowView.vue';
 import AnimatedBackground from '../views/AnimatedBackground.vue';
+import FeatureCard from '/src/components/FeatureCard.vue' 
 
 
 const routes = [
@@ -18,7 +19,7 @@ const routes = [
   {
     path: '/loan-officer',
     name: 'loan-officer-home',
-    component: LoanOfficerHome, 
+    component: LoanOfficerHome, FeatureCard
   },
   {
     path: '/executive-home',
