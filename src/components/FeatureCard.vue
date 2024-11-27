@@ -13,6 +13,7 @@
     <h3 class="text-xl font-bold mb-4">{{ title }}</h3>
     <p class="text-gray-600 leading-relaxed">{{ description }}</p>
     <ul v-if="items" class="mt-6 space-y-3">
+      <li
         v-for="(item, index) in items"
         :key="index"
         class="flex items-start space-x-3"
