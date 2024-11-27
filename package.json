@@ -40,13 +40,16 @@
     "@babel/eslint-parser": "^7.12.16",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.9",
+    "@types/three": "^0.170.0",
     "@vitejs/plugin-react": "^4.3.3",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "babel-loader": "^9.2.1",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3"
+    "eslint-plugin-vue": "^8.0.3",
+    "vite": "^6.0.1",
+    "webpack": "^5.96.1"
   },
   "eslintConfig": {
     "root": true,
