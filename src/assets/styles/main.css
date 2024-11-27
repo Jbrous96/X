@@ -7,7 +7,16 @@
         @apply bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors;
     }
 }
+h1 {
+    font-family: 'Bulgatry' !important;
+    font-size: 80%;
+    line-height: 2.3 !important;
+    text-shadow: .1px -.1px .8px rgb(221, 221, 214);
+} 
+h1::before {
+    margin: 4vmax;
 
+}
 .page-enter-active,
 .page-leave-active {
     transition: opacity 0.3s ease;

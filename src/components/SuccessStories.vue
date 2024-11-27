@@ -53,7 +53,7 @@ export default defineComponent({
       storyRefs.value.forEach((story) => observer.observe(story))
     })
 
-    return {o
+    return {
       storyRefs,
       isVisible
     }

@@ -5,7 +5,7 @@
       <div
         class="absolute inset-0 bg-center bg-cover"
         :style="{
-          backgroundImage: 'url(@/assets/connect-bg.jpg)',
+          backgroundImage: 'url(@/assets/xtreme-logo.png)',
           transform: `translateY(${scrollY * 0.3}px)`
         }"
       ></div>
@@ -59,7 +59,6 @@ export default defineComponent({
     const { y: scrollY } = useWindowScroll()
     const cards = ref([])
     const isVisible = ref([])
-
     const features = [
       {
         title: 'Seamless Communication',

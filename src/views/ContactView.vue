@@ -1,6 +1,7 @@
 <template>
+<AnimatedBackground class="AnimatedBackground inset-3 z-3">
   <div class="pt-20">
-    <section class="py-24 bg-gray-50">
+    <section class="py-24 bg-gray-50 bg-AnimatedBackground">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
           <h1 class="text-4xl font-bold text-center mb-12">Get in Touch</h1>
@@ -77,7 +78,10 @@
           </div>
         </div>
       </div>
-    </section>
+   </section>
+  </div>
+  </AnimatedBackground>
+
 
     <section class="py-24 bg-white">
       <div class="container mx-auto px-4">
@@ -99,10 +103,7 @@
         </div>
       </div>
     </section>
-
     <!-- Google Map Section -->
-
-  </div>
 </template>
 
 <script>

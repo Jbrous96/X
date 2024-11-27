@@ -42,12 +42,11 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
 import { useWindowScroll } from '@vueuse/core'
 import SuccessStories from '@/components/SuccessStories.vue'
 import PerformanceChart from '@/components/PerformanceChart.vue'
 
-export default defineComponent({
+export default ({
   name: 'WinView',
   components: {
     SuccessStories,

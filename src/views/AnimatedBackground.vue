@@ -1,6 +1,5 @@
 <template>
   <div class="text-background">
-    <!-- First Row -->
     <div class="rail rail-top">
       <div class="rail_container">
         <div class="rail_clip">
@@ -10,7 +9,7 @@
             </div>
           </div>
         </div>
-        <svg width="1200" height="120" viewBox="0 0 1200 120" class="rail_sizing">
+        <svg width="100%" height="100%" viewBox="0 0 1200 120" class="rail_sizing">
           <clipPath id="textPath1" clipPathUnits="objectBoundingBox">
             <text x="50%" y="50%" text-anchor="middle" class="massive-text">
               AUTOMATE
@@ -19,8 +18,6 @@
         </svg>
       </div>
     </div>
-
-    <!-- Second Row -->
     <div class="rail rail-middle">
       <div class="rail_container">
         <div class="rail_clip">
@@ -61,8 +58,35 @@
     </div>
   </div>
 </template>
+<script>
+import { defineComponent } from 'vue';
+import { useWindowScroll } from '@vueuse/core';
+
+export default defineComponent({
+  name: 'AnimatedBackground',
+  setup() {
+    // If you want to react to window scrolls, you can define scroll-related logic here
+    const { x, y } = useWindowScroll();
+
+    // You can return any reactive properties or methods from setup
+    return {
+      x,
+      y
+    };
+  }
+});
+</script>
 
 <style scoped>
+/* Assuming this CSS goes in AnimatedBackground.vue or a relevant stylesheet */
+.animated-background {
+  position: fixed;  /* Use fixed to make it cover the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;    /* Full viewport width */
+  height: 100vh;   /* Full viewport height */
+  z-index: 0;      /* Behind other content */
+}
 .text-background {
   position: fixed;
   inset: 0;
@@ -97,7 +121,7 @@
 .rail_color {
   position: absolute;
   inset: 0;
-  background-color: #0c0c0e;
+  background-color: #90ffa6;
 }
 
 .rail-top .rail_color {
@@ -182,9 +206,3 @@
   z-index: 10;
 }
 </style>
-
-<script>
-export default {
-  name: 'AnimatedBackground'
-}
-</script>

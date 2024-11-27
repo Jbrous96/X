@@ -20,9 +20,10 @@
           @mouseleave="handleHover(null)"
           @click="selectRole('loan-officer')"
         >
-          <h2>Production</h2>
+          <h2>Loan Officer</h2>
+          <p>Access powerful tools designed for loan professionals</p>
           <!-- New highlighted text -->
-          <h1 class="highlighted-text-shadow">Orchestra</h1>
+          <h1 class="highlighted-text-shadow">Production</h1>
         </div>
 
         <div 
@@ -38,12 +39,12 @@
 
         <div 
           class="split-section right"
-          @mouseenter="handleHover('leadership')"
+          @mouseenter="handleHover('executive')"
           @mouseleave="handleHover(null)"
           @click="selectRole('executive')"
         >
           <h2>Leadership</h2>
-          <p>Conductor</p>
+          <p>Comprehensive solutions for mortgage company leaders</p>
         </div>
       </div>
     </div>
@@ -359,7 +360,7 @@ p {
   }
 
   .split-section {
-    flex:1;
+    width: 100vw;
     height: 50vh;
   }
 
@@ -405,7 +406,7 @@ p {
 
   body {
     min-block-size: 100%;
-    font-family: system-ui, sans-serif;
+    font-family: 'Bulgatry';
     place-content: center;
   }
   
