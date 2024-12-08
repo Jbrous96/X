@@ -20,8 +20,8 @@
           @mouseleave="handleHover(null)"
           @click="selectRole('loan-officer')"
         >
-          <h2>Loan Officer</h2>
-          <p>Access powerful tools designed for loan professionals</p>
+          <h2>Production</h2>
+          <p>Access powerful tools designed for originators,procoessors & underwriters</p>
           <!-- New highlighted text -->
           <h1 class="highlighted-text-shadow">Production</h1>
         </div>
