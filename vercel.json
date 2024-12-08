@@ -4,10 +4,7 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": {
-        "buildCommand": "yarn build",
-        "outputDirectory": "dist"
-      }
+      "config": { "zeroConfig": true }
     }
   ],
   "routes": [
