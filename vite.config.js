@@ -6,13 +6,14 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, '.public/src'),
       'three': 'three'
     }
   },
   build: {
     sourcemap: true,
     outDir: 'dist',
+    publicDir: 'public',
     assetsDir: 'assets',
     rollupOptions: {
       input: {
