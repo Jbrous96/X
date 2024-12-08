@@ -2,7 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './assets/styles/main.css'
-
+console.log('App starting...');
+createApp(App).mount('#app');
+console.log('App mounted');
 // Font Awesome Setup
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
