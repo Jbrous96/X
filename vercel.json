@@ -3,11 +3,18 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "zeroConfig": true }
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
+    {
+      "src": "/public/assets/(.*)",
+      "dest": "/public/assets/$1"
+    },
+    {
+      "src": "/public/src/(.*)",
+      "dest": "/public/src/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
