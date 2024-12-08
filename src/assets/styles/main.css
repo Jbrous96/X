@@ -8,9 +8,8 @@
     }
 }
 h1 {
-    font-family: 'Bulgatry' !important;
-    font-size: 80%;
-    line-height: 2.3 !important;
+    font-family: 'Montserrat' !important;
+    line-height: 2.3;
     text-shadow: .1px -.1px .8px rgb(221, 221, 214);
 } 
 h1::before {
