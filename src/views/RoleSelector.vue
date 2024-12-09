@@ -122,7 +122,7 @@ export default {
   transition: opacity 0.8s ease-out;
 }
 
-.loading-screen .animate-complete {
+.loading-screen.animate-complete {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-out 0.5s;
