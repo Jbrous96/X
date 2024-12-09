@@ -287,7 +287,11 @@ export default {
   width: 100%;
   background: oklch(12.33% 0 125.81);
 }
-
+.loading-screen .animate-complete {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out 0.5s;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
