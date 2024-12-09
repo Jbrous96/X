@@ -93,7 +93,7 @@ body {
 }
 
 .page {
-  font-family: 'Anton';,
+  font-family: 'Anton';
   letter-spacing: .41rem;
   line-height: -2.4;
   font-weight: 700 !important;

@@ -1,8 +1,8 @@
 <template>
-  
   <div class="pt-20">
     <!-- Hero Section -->
     <section class="min-h-[60vh] relative flex items-center overflow-hidden bg-gray-900">
+      <DashboardContainer />
       <!-- Background gradients -->
       <div class="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900"></div>
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-green-500/10 via-transparent to-transparent"></div>
@@ -135,9 +135,13 @@
 <script>
 import { defineComponent, onMounted } from 'vue'
 import { useWindowScroll } from '@vueuse/core'
+import DashboardContainer from '@/components/three/DashboardContainer.vue'
 
 export default defineComponent({
   name: 'GrowView',
+  components: {
+    DashboardContainer
+  },
   setup() {
     const { y: scrollY } = useWindowScroll()
 

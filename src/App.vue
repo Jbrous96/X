@@ -1,4 +1,5 @@
 <template>
+  <!-- view if the page is the corresponding page -->
   <div id="app">
     <RoleSelector v-if="RoleSelector" />
     <nav-bar v-if="!RoleSelector" />
@@ -15,6 +16,7 @@
   </div>
 </template>
 
+<!-- Import from the pages in this web app -->
 <script>
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
@@ -29,13 +31,15 @@ import AnimatedBackground from '@/views/AnimatedBackground.vue';
 import LoanOfficerHome from '@/views/LoanOfficerHome.vue';
 import ExecutiveHome from '@/views/ExecutiveHome.vue';
 
+
+// exports to the browser/console 
 export default {
   name: 'App', 
   components: {
     // views,
     LoanOfficerHome,
     RoleSelector,
-    // Executivehome,
+    Executivehome,
     NavBar,
     ContactView,
     ConnectView,
@@ -44,6 +48,7 @@ export default {
     AnimatedBackground,
     AppFooter
   },
+  // setup function to the respective pages
   setup() {
     const route = useRoute();
     const RoleSelector = computed(() => route.path === '/');
@@ -52,7 +57,7 @@ export default {
     const WinView = computed(() => route.path === '/win');
     const GrowView = computed(() => route.path === '/grow');
     const ContactView = computed(() => route.path === '/contact'); 
-
+// returns the pages to the corresponding link/path
     return {
       RoleSelector,
       Executive,
@@ -69,7 +74,6 @@ export default {
 </script>
 
 <style>
-
 * {
   margin: 80;
   padding: 0;
