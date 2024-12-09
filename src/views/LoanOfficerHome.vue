@@ -7,7 +7,7 @@
 </template>
 <script>
 import SuccessStories from '@/components/SuccessStories.vue'
-import Timeline from '@/components/Timeline.vue'
+import Timeline from '@/components/TimelineSection.vue'
 export default {
   name: 'LoanOfficer',
   components: {

@@ -84,9 +84,9 @@ function RoleSelectorvue_type_template_id_78c83f5d_scoped_true_render(_ctx, _cac
     }])
   }, " Please select your role for the best experience ", 2), (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", {
     class: "split-section left",
-    onMouseenter: _cache[0] || (_cache[0] = $event => $setup.handleHover('loan-officer')),
+    onMouseenter: _cache[0] || (_cache[0] = $event => $setup.handleHover('production')),
     onMouseleave: _cache[1] || (_cache[1] = $event => $setup.handleHover(null)),
-    onClick: _cache[2] || (_cache[2] = $event => $setup.selectRole('loan-officer'))
+    onClick: _cache[2] || (_cache[2] = $event => $setup.selectRole('production'))
   }, _cache[7] || (_cache[7] = [(0,runtime_core_esm_bundler/* createElementVNode */.Lk)("h2", null, "Loan Officer", -1), (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("p", null, "Access powerful tools designed for loan professionals", -1), (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("h1", {
     class: "highlighted-text-shadow"
   }, "Production", -1)]), 32), (0,runtime_core_esm_bundler/* createElementVNode */.Lk)("div", {
@@ -1936,7 +1936,7 @@ const ExecutiveHome_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(Exec
     const route = (0,vue_router/* useRoute */.lq)();
     const RoleSelector = (0,runtime_core_esm_bundler/* computed */.EW)(() => route.path === '/');
     const Executive = (0,runtime_core_esm_bundler/* computed */.EW)(() => route.path === '/executive');
-    const LoanOfficerHome = (0,runtime_core_esm_bundler/* computed */.EW)(() => route.path === 'loan-officer');
+    const LoanOfficerHome = (0,runtime_core_esm_bundler/* computed */.EW)(() => route.path === 'production');
     const WinView = (0,runtime_core_esm_bundler/* computed */.EW)(() => route.path === '/win');
     const GrowView = (0,runtime_core_esm_bundler/* computed */.EW)(() => route.path === '/grow');
     const ContactView = (0,runtime_core_esm_bundler/* computed */.EW)(() => route.path === '/contact');
@@ -1987,8 +1987,8 @@ const routes = [{
   name: 'role-selector',
   component: RoleSelector
 }, {
-  path: '/loan-officer',
-  name: 'loan-officer-home',
+  path: '/production',
+  name: 'production-home',
   component: LoanOfficerHome,
   FeatureCard: FeatureCard
 }, {

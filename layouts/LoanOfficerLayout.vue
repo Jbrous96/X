@@ -43,9 +43,9 @@
             const router = useRouter()
 
             const navigationItems = [
-                { name: 'Dashboard', path: '/loan-officer/dashboard' },
-                { name: 'Clients', path: '/loan-officer/clients' },
-                { name: 'Pipeline', path: '/loan-officer/pipeline' },
+                { name: 'Dashboard', path: '/production/dashboard' },
+                { name: 'Clients', path: '/production/clients' },
+                { name: 'Pipeline', path: '/production/pipeline' },
                 { name: 'Products', path: '/products' },
                 { name: 'Contact', path: '/contact' },
                 { name: 'Careers', path: '/careers' }

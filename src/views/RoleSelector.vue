@@ -14,35 +14,22 @@
           Please select your role for the best experience
         </h1>
 
-        <div 
-          class="split-section left"
-          @mouseenter="handleHover('loan-officer')"
-          @mouseleave="handleHover(null)"
-          @click="selectRole('loan-officer')"
-        >
+        <div class="split-section left" @mouseenter="handleHover('production')" @mouseleave="handleHover(null)"
+          @click="selectRole('production')">
           <h2>Production</h2>
           <p>Access powerful tools designed for originators,procoessors & underwriters</p>
-          <!-- New highlighted text -->
-          <h1 class="highlighted-text-shadow">Production</h1>
         </div>
 
-        <div 
-          class="sphere-wrapper"
-          :style="{
-            transform: `translate(-50%, -50%) perspective(1000px) 
+        <div class="sphere-wrapper" style="{
+          transform: `translate(-50%, -50%) perspective(1000px) 
                      rotateY(${mouseX * 0.01}deg) 
                      rotateX(${-mouseY * 0.01}deg)`
-          }"
-        >
+        }">
           <spinning-logo-sphere></spinning-logo-sphere>
         </div>
 
-        <div 
-          class="split-section right"
-          @mouseenter="handleHover('executive')"
-          @mouseleave="handleHover(null)"
-          @click="selectRole('executive')"
-        >
+        <div class="split-section right" @mouseenter="handleHover('executive')" @mouseleave="handleHover(null)"
+          @click="selectRole('executive')">
           <h2>Leadership</h2>
           <p>Comprehensive solutions for mortgage company leaders</p>
         </div>
@@ -52,7 +39,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';  // Fixed: Added onMounted to imports
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import SpinningLogoSphere from '@/components/SpinningLogoSphere.vue';
 
@@ -67,7 +54,7 @@ export default {
     const isHovering = ref(false);
     const mouseX = ref(0);
     const mouseY = ref(0);
-    const loadingComplete = ref(false);  // Fixed: Removed duplicate loadingComplete
+    const loadingComplete = ref(false);
 
     onMounted(() => {
       setTimeout(() => {
@@ -104,23 +91,22 @@ export default {
 </script>
 
 <style scoped>
-* {
-  /* font-family: 'Lato'; */
-}
-
 @keyframes sparkle {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
     transform: rotate(180deg);
   }
+
   100% {
     background-position: 0% 50%;
     transform: rotate(360deg);
   }
 }
+
 .page-container {
   /* position: relative; */
   width: 100vw;
@@ -136,10 +122,10 @@ export default {
   transition: opacity 0.8s ease-out;
 }
 
-.loading-screen.animate-complete {
+.loading-screen .animate-complete {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease-out 0.5s; /* Delayed fade out after impact */
+  transition: opacity 0.3s ease-out 0.5s;
 }
 
 .approaching-sphere {
@@ -161,30 +147,34 @@ export default {
     transform: translate(-50%, -50%) scale(0.8);
     filter: brightness(1.5);
   }
+
   20% {
     transform: translate(-50%, -50%) scale(1.1);
     filter: brightness(1.8);
   }
+
   40% {
     transform: translate(-50%, -50%) scale(0.95);
     filter: brightness(1.2);
   }
+
   100% {
     transform: translate(-50%, -50%) scale(1);
     filter: brightness(1);
   }
 }
 
-/* Add shockwave effect to the container */
 @keyframes containerShockwave {
   0% {
     transform: scale(0.8);
     filter: brightness(1.5);
   }
+
   50% {
     transform: scale(1.8);
     filter: brightness(2.2);
   }
+
   100% {
     transform: scale(1);
     filter: brightness(1);
@@ -206,7 +196,6 @@ export default {
   animation: containerShockwave 0.5s ease-out;
 }
 
-/* Optional: Add ripple effect on impact */
 .loading-screen::after {
   content: '';
   position: absolute;
@@ -218,9 +207,10 @@ export default {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.4;
+  animation: ripple 0.6s ease-out forwards;
 }
 
-.loading-screen.animate-complete::after {
+.aniimate-screen::after {
   animation: ripple 0.6s ease-out forwards;
 }
 
@@ -230,20 +220,23 @@ export default {
     height: 0;
     opacity: 1;
   }
+
   100% {
     width: 300vw;
     height: 300vw;
     opacity: 0;
   }
 }
+
 .main-content {
   opacity: 0;
   transition: opacity 0.6s ease-out;
 }
 
-.main-content.show {
+.main-content .show {
   opacity: 1;
 }
+
 .split-container {
   width: 100vw;
   height: 100vh;
@@ -278,16 +271,17 @@ export default {
   transition: all 0.4s ease;
   padding: 2rem;
 }
+
 .left {
-    width: 100%;
-    --hue: 130;
-    --bg: oklch(83% .3 var(--hue));
-    --text: linear-gradient(45deg, oklch(60% 0.12 125.6), oklch(65% 0.14 125.7), oklch(55% 0.13 125.8));
-    --shadow: oklch(25% .2 var(--hue));
-    --highlight: oklch(58% .05 var(--hue));
-    background-color: var(--bg);
-    color: var(--text);
-  }
+  width: 100%;
+  --hue: 130;
+  --bg: oklch(83% .3 var(--hue));
+  --text: linear-gradient(45deg, oklch(60% 0.12 125.6), oklch(65% 0.14 125.7), oklch(55% 0.13 125.8));
+  --shadow: oklch(25% .2 var(--hue));
+  --highlight: oklch(58% .05 var(--hue));
+  background-color: var(--bg);
+  color: var(--text);
+}
 
 .right {
   width: 100%;
@@ -295,9 +289,17 @@ export default {
 }
 
 @keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .split-section:hover h2 {
@@ -313,8 +315,8 @@ h2 {
   line-height: .815;
   letter-spacing: -.15ch !important;
   text-shadow:
-      0 .15ch 15px var(--shadow),
-      0 -2px 0 var(--highlight);
+    0 .15ch 15px var(--shadow),
+    0 -2px 0 var(--highlight);
 
 }
 
@@ -396,7 +398,7 @@ p {
     --shadow: oklch(25% .2 var(--hue));
     --highlight: oklch(58% .05 var(--hue));
   }
-  
+
 
 
   html {
@@ -409,13 +411,13 @@ p {
     font-family: 'Bulgatry';
     place-content: center;
   }
-  
+
   h1 {
     font-size: 15vi;
     letter-spacing: -.15ch;
     line-height: .75;
   }
-  
+
   small {
     max-inline-size: 30ch;
   }

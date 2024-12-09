@@ -7,7 +7,7 @@ import ConnectView from '../views/ConnectView.vue';
 import ContactView from '../views/ContactView.vue';
 import GrowView from '../views/GrowView.vue';
 import AnimatedBackground from '../views/AnimatedBackground.vue';
-import FeatureCard from '/src/components/FeatureCard.vue' 
+import FeatureCard from '../components/FeatureCard.vue' 
 
 
 const routes = [
@@ -17,8 +17,8 @@ const routes = [
     component: RoleSelector,
   },
   {
-    path: '/loan-officer',
-    name: 'loan-officer-home',
+    path: '/production',
+    name: 'production-home',
     component: LoanOfficerHome, FeatureCard
   },
   {
