@@ -1,4 +1,5 @@
 <template>
+  
   <div class="pt-20">
     <!-- Hero Section -->
     <section class="min-h-[60vh] relative flex items-center overflow-hidden bg-gray-900">
